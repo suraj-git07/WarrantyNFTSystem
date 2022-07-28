@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.navbar{
+  background-color:#2F232E;
+  
+  color: white;
+  font-family: "Poppins";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navadd{
+  font-family: 'Courier New', Courier, monospace;
+}
+.navimg{
+  margin-right: 10px;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbutton{
+  /* position: relative;
+  left: 900px;
+  bottom: 20px; */
+  float: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.bodyouterdiv{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.nftcontent{
   color: white;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: auto;
+  
+  
 }
 
-.App-link {
-  color: #61dafb;
+.nftCard{
+  background-color: #5c3c54;
+  color: white;
+  width:26rem;
+  
+}
+.nftCardItem{
+  background-color:#3a2d37
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.claimNFT{
+  background-color:#332b31 ;
+  position: relative;
+  top:120px;
+  padding: 10px;
+}
+
+
+.claimbtn{
+  position: relative;
+  left: 45%;
+  color: rgb(238, 244, 248);
+  font-family: "Poppins";
+}
+
+body{
+  background-color:#29232C;
 }
