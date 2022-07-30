@@ -11,9 +11,9 @@ export default function ShopNav() {
           height="35px"
           className="navimg"
         ></img>
-        WarranFT
+        WarranFT<span className="navShop">shop</span>
       </h2>
-      <h3 className="navShop">Shop</h3>
+      {/* <h3 className="navShop">Shop</h3> */}
     </div>
   );
 }

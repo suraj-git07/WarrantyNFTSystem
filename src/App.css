@@ -23,8 +23,6 @@
 .navShop{
   color:"white";
   font-family: "Dancing Script";
-  position: relative;
-  right: 1060px;
 }
 
 .notBought{
@@ -121,4 +119,20 @@
 
 body{
   background-color:"white";
+}
+
+
+
+
+.ShopCardContainer{
+  /* display: flex;
+  gap:20px;
+  padding: 40px;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 40px 0px;
+  padding: 40px;
+  margin-top: 50px;
+  width: 100%;
 }

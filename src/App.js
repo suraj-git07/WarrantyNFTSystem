@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import "./Shop.css";
 import Navbar from "./Navbar";
 import Body from "./Body";
 import Footer from "./Footer";
@@ -94,11 +95,11 @@ function App() {
             exact
             path="/shop"
             element={
-              <>
+              <div className="ShopCardContainer">
                 <ShopNav />
 
                 {ShopData.map(showShopData)}
-              </>
+              </div>
             }
           ></Route>
           <Route
