@@ -44,7 +44,12 @@
 }
 
 .bodyouterdiv{
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  gap: 40px 0px;
+  padding: 40px;
+  margin-top: 50px;
+  width: 100%;
 }
 
 .nftcontent{

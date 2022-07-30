@@ -51,7 +51,6 @@ export default function Body(props) {
 
   return (
     <div className="bodyouterdiv">
-      <div className="nftcontent col-4">
         {usertokenIDs.length > 0 ? (
           usertokenIDs.map(createNFTCard)
         ) : (
@@ -64,7 +63,6 @@ export default function Body(props) {
             <h1 className="notBoughttext">Go for Shooping</h1>
           </div>
         )}
-      </div>
     </div>
   );
 }
