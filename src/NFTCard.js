@@ -1,6 +1,5 @@
 import { __esModule } from "@testing-library/jest-dom/dist/matchers";
 import React, { useEffect, useState } from "react";
-import NewCads1 from "./NewCads1";
 
 export default function NFTCard(props) {
   const tokenId = props.tokenId;
@@ -61,48 +60,38 @@ export default function NFTCard(props) {
   }, [tokenId]);
 
   return (
-    // <div className="container ">
-    //   <div className="card nftCard ">
-    //     <img
-    //       className="card-img-top nftimg"
-    //       src={
-    //         nftImgsrc
-    //           ? nftImgsrc
-    //           : "https://cdn-icons-png.flaticon.com/512/6642/6642204.png"
-    //       }
-    //       alt="nftimg"
-    //     />
-    //     <div className="card-header ">NFT ID: {tokenId}</div>
-    //     <ul className="list-group list-group-flush">
-    //       {/* <li className="list-group-item nftCardItem">
-    //         NFT URI: {tokenURI ? tokenURI : "Not minted"}{" "}
-    //       </li> */}
-    //       <li className="list-group-item nftCardItem ">
-    //         Name: {tokenURI ? nftName : "Not minted"}{" "}
-    //       </li>
-    //       <li className="list-group-item nftCardItem">
-    //         Product Description: {tokenURI ? nftdisc : "Not Minted"}{" "}
-    //       </li>
-    //       <li className="list-group-item nftCardItem">
-    //         Price: {tokenURI ? nftPrice : "Not minted"}{" "}
-    //       </li>
-    //       <li className="list-group-item nftCardItem">Validity: {validity}</li>
-    //       {/* <li className="list-group-item nftCardItem">
-    //         ValidTill: {validTill}
-    //       </li> */}
-    //     </ul>
-    //   </div>
-    //   <br></br>
-    // </div>
-    <div>
-      <NewCads1
-        nftImgsrc={nftImgsrc}
-        nftdisc={nftdisc}
-        validity={validity}
-        tokenURI={tokenURI}
-        nftName={nftName}
-        tokenId={tokenId}
-      />
+    <div className="container ">
+      <div className="card nftCard ">
+        <img
+          className="card-img-top nftimg"
+          src={
+            nftImgsrc
+              ? nftImgsrc
+              : "https://cdn-icons-png.flaticon.com/512/6642/6642204.png"
+          }
+          alt="nftimg"
+        />
+        <div className="card-header ">NFT ID: {tokenId}</div>
+        <ul className="list-group list-group-flush">
+          {/* <li className="list-group-item nftCardItem">
+            NFT URI: {tokenURI ? tokenURI : "Not minted"}{" "}
+          </li> */}
+          <li className="list-group-item nftCardItem ">
+            Name: {tokenURI ? nftName : "Not minted"}{" "}
+          </li>
+          <li className="list-group-item nftCardItem">
+            Product Description: {tokenURI ? nftdisc : "Not Minted"}{" "}
+          </li>
+          <li className="list-group-item nftCardItem">
+            Price: {tokenURI ? nftPrice : "Not minted"}{" "}
+          </li>
+          <li className="list-group-item nftCardItem">Validity: {validity}</li>
+          {/* <li className="list-group-item nftCardItem">
+            ValidTill: {validTill}
+          </li> */}
+        </ul>
+      </div>
+      <br></br>
     </div>
   );
 }

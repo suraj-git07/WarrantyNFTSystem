@@ -6,11 +6,10 @@ import Footer from "./Footer";
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
 import Warranty from "../src/abis/Warranty.json";
-// import ShopData from "./ProductData/book.js";
-// import Shop from "./Shop";
+import ShopData from "./ProductData/book.js";
+import Shop from "./Shop";
 import ShopNav from "./ShopNav";
-import { NewCards } from "./NewCards";
-import Article from "./Article";
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -69,7 +68,7 @@ function App() {
 
   const showShopData = (data) => {
     return (
-      <Article
+      <Shop
         Pimg={data["image"]}
         PseriaId={data["attributes"]["serialNumber"]}
         Pname={data["attributes"]["name"]}
@@ -98,7 +97,7 @@ function App() {
               <>
                 <ShopNav />
 
-                <NewCards />
+                {ShopData.map(showShopData)}
               </>
             }
           ></Route>

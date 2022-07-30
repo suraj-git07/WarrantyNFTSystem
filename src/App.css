@@ -80,12 +80,7 @@
   color:#74747D;
 }
 
-#cardsSection{
-  
-  min-height: 1000px !important;
-  margin-top:130vh ;
 
-}
 
 .productimg{
   position: inherit;
@@ -122,18 +117,7 @@
 
 }
 
-#cardSections{
-  display: flex !important;
-  flex-direction: row;
-  flex-wrap: wrap !important;
-  
-}
 
-article{
-  min-width: 200px !important;
-  margin-bottom: 5vh;
-  max-width:350px !important;
-}
 
 body{
   background-color:"white";
