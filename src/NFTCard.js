@@ -21,7 +21,7 @@ export default function NFTCard(props) {
         if (xhr.status === 200) {
           success(JSON.parse(xhr.responseText));
         } else {
-          error(xhr);
+          console.log("Error happed :", xhr);
         }
       }
     };
@@ -34,12 +34,10 @@ export default function NFTCard(props) {
       let _isvalid = await contract.methods.isValid(tokenId).call();
       let _validTill = await contract.methods.validTill(tokenId).call();
       _isvalid = _isvalid.toString();
+
       _validTill = _validTill.toNumber();
       setvalidity(_isvalid);
       setValidTill(_validTill);
-      // console.log("logging validity");
-      // console.log(validity);
-      // console.log(validTill);
     };
 
     const NFTImgData = (data) => {
@@ -62,8 +60,8 @@ export default function NFTCard(props) {
   }, [tokenId]);
 
   return (
-    <div className="container">
-      <div className="card nftCard">
+    <div className="container ">
+      <div className="card nftCard ">
         <img
           className="card-img-top nftimg"
           src={
@@ -73,12 +71,12 @@ export default function NFTCard(props) {
           }
           alt="nftimg"
         />
-        <div className="card-header">NFT ID: {tokenId}</div>
+        <div className="card-header ">NFT ID: {tokenId}</div>
         <ul className="list-group list-group-flush">
           {/* <li className="list-group-item nftCardItem">
             NFT URI: {tokenURI ? tokenURI : "Not minted"}{" "}
           </li> */}
-          <li className="list-group-item nftCardItem">
+          <li className="list-group-item nftCardItem ">
             Name: {tokenURI ? nftName : "Not minted"}{" "}
           </li>
           <li className="list-group-item nftCardItem">

@@ -51,7 +51,7 @@ export default function Body(props) {
 
   return (
     <div className="bodyouterdiv">
-      <div className="nftcontent">
+      <div className="nftcontent col-4">
         {usertokenIDs.length > 0 ? (
           usertokenIDs.map(createNFTCard)
         ) : (

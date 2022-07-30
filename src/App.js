@@ -6,6 +6,9 @@ import Footer from "./Footer";
 import Web3 from "web3";
 import detectEthereumProvider from "@metamask/detect-provider";
 import Warranty from "../src/abis/Warranty.json";
+// import ShopData from "./ProductData/book.js";
+// import Shop from "./Shop";
+// import ShopNav from "./ShopNav";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({
@@ -30,22 +33,6 @@ function App() {
       } else {
         console.error("Install Metamask");
       }
-
-      // if (window.ethereum) {
-      //   provider = window.ethereum;
-      //   try {
-      //     await provider.enable();
-      //   } catch {
-      //     console.error("user is not allowed to connect with metamask");
-      //   }
-      // } else if (window.web3) {
-      //   provider = window.web3.currentProvider;
-      // } else if (!process.env.production) {
-      //   // not in production, connected with local blockchain
-      //   provider = new Web3.provider.HttpProvider("http://localhost:7545");
-      // } else {
-      //   console.error("Install Metamask",error);
-      // }
     };
 
     loadProvider();
@@ -77,12 +64,34 @@ function App() {
     web3Api.web3 && contractInstance();
   }, [web3Api.web3]);
 
+  // const showShopData = (data) => {
+  //   return (
+  //     <Shop
+  //       Pimg={data["image"]}
+  //       PseriaId={data["attributes"]["serialNumber"]}
+  //       Pname={data["attributes"]["name"]}
+  //       Pdesc={data["description"]}
+  //       Pprice={data["attributes"]["price"]}
+  //     />
+  //   );
+  // };
+
+  // // making setInterval for changinf nft status
+
+  // const checkValid = async () => {
+  //   await contract.methods.checkValid().send({ from: account });
+  // };
+
+  // // const checkValidation = setTimeout(checkValid, 120);
+
   return (
     <div className="App">
       <Navbar account={account} />
       <Body account={account} contract={contract} />
 
       <Footer account={account} contract={contract} />
+      {/* <ShopNav />
+      <div className="nftcontent">{ShopData.map(showShopData)}</div> */}
     </div>
   );
 }

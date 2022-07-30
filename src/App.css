@@ -1,5 +1,5 @@
 .navbar{
-  background-color:#2F232E;
+  background-color:#7B3FE4;
   
   color: white;
   font-family: "Poppins";
@@ -20,6 +20,12 @@
   float: right;
 }
 
+.navShop{
+  color:#f7c940;
+  font-family: "Dancing Script";
+  position: relative;
+  right: 1074px;
+}
 
 .notBought{
   display: block;
@@ -39,6 +45,9 @@
   right: 30px;
 }
 
+.bodyouterdiv{
+  
+}
 
 .nftcontent{
   color: white;
@@ -46,35 +55,43 @@
   flex-direction: row;
   flex-shrink: auto;
   padding-top: 10px;
+  
   margin: 0;
   -webkit-text-stroke-width: thin;
   
   
 }
 .nftimg{
-  width:26rem;
+  width:25.9rem;
   height: 250px;
   background-color: #29232C;
   
 }
 
 .nftCard{
-  background-color: #5c3c54;
+  background-color: #7B3FE4;
   color: white;
   width:26rem;
   
 }
 .nftCardItem{
-  background-color:#3a2d37
+  background-color:"white";
+  color:#74747D;
 }
 
 
 .claimNFT{
-  background-color:#332b31 ;
+  background-color:#7B3FE4 ;
   /* position: relative;
   top:120px; */
   margin-top: 35px;
   padding-bottom: 30px;
+  /* color:#74747D ; */
+}
+
+.forminput{
+  color:#74747D;
+  background-color: #f8f8fc;
 }
 
 
@@ -85,6 +102,14 @@
   font-family: "Poppins";
 }
 
+.refreshbtn{
+  position: relative;
+  left:45% ;
+  color: rgb(238, 244, 248);
+  font-family: "Poppins";
+
+}
+
 body{
-  background-color:#29232C;
+  background-color:"white";
 }

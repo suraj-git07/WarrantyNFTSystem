@@ -25,7 +25,7 @@ export default function Footer(props) {
       <form action="" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="form-control"
+          className="form-control forminput"
           name="TokenID"
           value={claimData.TokenID}
           onChange={(e) => {
@@ -41,7 +41,7 @@ export default function Footer(props) {
         />
         <input
           type="text"
-          className="form-control"
+          className="form-control forminput"
           name="TokenURI"
           value={claimData.TokenURI}
           onChange={(e) => {
@@ -57,7 +57,7 @@ export default function Footer(props) {
         />
         <input
           type="text"
-          className="form-control"
+          className="form-control forminput"
           name="SerialID"
           value={claimData.SerialID}
           onChange={(e) => {
