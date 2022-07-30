@@ -59,7 +59,7 @@ export default function Footer(props) {
           type="text"
           className="form-control"
           name="SerialID"
-          value={claimData.serialID}
+          value={claimData.SerialID}
           onChange={(e) => {
             setClaimData((prevData) => {
               return {

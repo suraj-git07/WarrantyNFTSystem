@@ -51,9 +51,22 @@ export default function Body(props) {
 
   return (
     <div className="bodyouterdiv">
-      <div className="nftcontent">{usertokenIDs.map(createNFTCard)}</div>
+      <div className="nftcontent">
+        {usertokenIDs.length > 0 ? (
+          usertokenIDs.map(createNFTCard)
+        ) : (
+          <div className="notBought">
+            <img
+              className="notBoughtimg"
+              src="https://cdn-icons.flaticon.com/png/512/4942/premium/4942246.png?token=exp=1659168721~hmac=273aad6e3df87c24a418d6034832e703"
+              alt="Go for shopping"
+            />
+            <h1 className="notBoughttext">Go for Shooping</h1>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
-// https://ipfs.io/ipfs/QmbrvSq3BCGS6yLBHrTw3rEEzMKiApJBAQzfwLqnfmy8j4
+// https://ipfs.io/ipfs/QmfQW5aXWuxEdsePCUk9nwoq7McXqFWBb1ChxEZb2faZ9E

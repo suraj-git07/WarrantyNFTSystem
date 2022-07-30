@@ -20,17 +20,41 @@
   float: right;
 }
 
-.bodyouterdiv{
-  display: flex;
-  flex-direction: column;
+
+.notBought{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  
 }
+.notBoughtimg{
+  width:250px;
+  height:250px;
+}
+.notBoughttext{
+  font-family: "Poppins";
+  color: #fffbfe;
+  position: relative;
+  right: 30px;
+}
+
 
 .nftcontent{
   color: white;
   display: flex;
   flex-direction: row;
   flex-shrink: auto;
+  padding-top: 10px;
+  margin: 0;
+  -webkit-text-stroke-width: thin;
   
+  
+}
+.nftimg{
+  width:26rem;
+  height: 250px;
+  background-color: #29232C;
   
 }
 
@@ -47,9 +71,10 @@
 
 .claimNFT{
   background-color:#332b31 ;
-  position: relative;
-  top:120px;
-  padding: 10px;
+  /* position: relative;
+  top:120px; */
+  margin-top: 35px;
+  padding-bottom: 30px;
 }
 
 
