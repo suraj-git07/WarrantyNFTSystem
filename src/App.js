@@ -8,7 +8,10 @@ import detectEthereumProvider from "@metamask/detect-provider";
 import Warranty from "../src/abis/Warranty.json";
 // import ShopData from "./ProductData/book.js";
 // import Shop from "./Shop";
-// import ShopNav from "./ShopNav";
+import ShopNav from "./ShopNav";
+import { NewCards } from "./NewCards";
+import Article from "./Article";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [web3Api, setWeb3Api] = useState({
@@ -64,17 +67,17 @@ function App() {
     web3Api.web3 && contractInstance();
   }, [web3Api.web3]);
 
-  // const showShopData = (data) => {
-  //   return (
-  //     <Shop
-  //       Pimg={data["image"]}
-  //       PseriaId={data["attributes"]["serialNumber"]}
-  //       Pname={data["attributes"]["name"]}
-  //       Pdesc={data["description"]}
-  //       Pprice={data["attributes"]["price"]}
-  //     />
-  //   );
-  // };
+  const showShopData = (data) => {
+    return (
+      <Article
+        Pimg={data["image"]}
+        PseriaId={data["attributes"]["serialNumber"]}
+        Pname={data["attributes"]["name"]}
+        Pdesc={data["description"]}
+        Pprice={data["attributes"]["price"]}
+      />
+    );
+  };
 
   // // making setInterval for changinf nft status
 
@@ -85,14 +88,35 @@ function App() {
   // // const checkValidation = setTimeout(checkValid, 120);
 
   return (
-    <div className="App">
-      <Navbar account={account} />
-      <Body account={account} contract={contract} />
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route
+            exact
+            path="/shop"
+            element={
+              <>
+                <ShopNav />
 
-      <Footer account={account} contract={contract} />
-      {/* <ShopNav />
-      <div className="nftcontent">{ShopData.map(showShopData)}</div> */}
-    </div>
+                <NewCards />
+              </>
+            }
+          ></Route>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Navbar account={account} />
+                <Body account={account} contract={contract} />
+
+                <Footer account={account} contract={contract} />
+              </>
+            }
+          ></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

@@ -6,7 +6,7 @@ const notes = [
     attributes: {
       serialNumber: "1001",
       name: "harry porter complete book set ",
-      price: "5000 Rs",
+      price: "5000 ",
       Warrantyvalid: 600,
     },
   },
@@ -17,7 +17,7 @@ const notes = [
     attributes: {
       serialNumber: "1002",
       name: "Asus Laptop ",
-      price: "1.2 lakhs Rs",
+      price: "1.2 lakhs ",
       Warrantyvalid: 600,
     },
   },
@@ -28,7 +28,7 @@ const notes = [
     attributes: {
       serialNumber: "1003",
       name: "Iron man hoodie",
-      price: "700 Rs",
+      price: "700 ",
       Warrantyvalid: 600,
     },
   },
@@ -39,7 +39,7 @@ const notes = [
     attributes: {
       serialNumber: "1004",
       name: "Apple Laptop",
-      price: "70000 Rs",
+      price: "70000 ",
       Warrantyvalid: 600,
     },
   },
@@ -50,7 +50,7 @@ const notes = [
     attributes: {
       serialNumber: "1006",
       name: "PS5",
-      price: "90000 Rs",
+      price: "90000 ",
       Warrantyvalid: 600,
     },
   },
@@ -61,7 +61,7 @@ const notes = [
     attributes: {
       serialNumber: "1007",
       name: "Realmi TV",
-      price: "1 lakhs Rs",
+      price: "1 lakhs ",
       Warrantyvalid: 600,
     },
   },
