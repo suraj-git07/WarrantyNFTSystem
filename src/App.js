@@ -106,7 +106,7 @@ function App() {
                 <Navbar account={account} />
                 <Body account={account} contract={contract} />
 
-                <Footer account={account} contract={contract} />
+                {/* <Footer account={account} contract={contract} /> */}
               </>
             }
           ></Route>

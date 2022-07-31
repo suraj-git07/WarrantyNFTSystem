@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import NFTCard from "./NFTCard";
+import ModalComponent from './ModalComponent';
 
 export default function Body(props) {
   let connectedAcc = props.account;
@@ -8,6 +9,7 @@ export default function Body(props) {
 
   const [usertokenIDs, setUserTokenID] = useState([]);
   const [userTokenURIs, setUserTokenURI] = useState({});
+  const [showModal, setShowModal] = useState(false);
 
   const createNFTCard = (_tokenId) => {
     let _tokenURI = userTokenURIs[_tokenId];
@@ -51,6 +53,7 @@ export default function Body(props) {
 
   return (
     <>
+    {showModal&&<ModalComponent account={props.account} contract={props.contract} setShowModal={setShowModal}/>}
       <div className="bodyouterdiv">
         {usertokenIDs.length > 0 ? (
           usertokenIDs.map(createNFTCard)
@@ -65,15 +68,20 @@ export default function Body(props) {
           </div>
         )}
       </div>
-      <button
-        type="button"
-        class="btn btn-outline-warning refreshbtn"
-        onClick={async () => {
-          await contract.methods.checkValid().send({ from: connectedAcc });
-        }}
-      >
-        Refresh Validity
-      </button>
+      <div className="CTA-Buttons">
+        <span style={{display:'flex', gap:'20px'}}>
+          <button
+            type="button"
+            class="btn btn-outline-warning refreshbtn"
+            onClick={async () => {
+              await contract.methods.checkValid().send({ from: connectedAcc });
+            }}
+          >
+            Refresh Validity
+          </button>
+          <button type="button" onClick={()=>{setShowModal(true)}} className="btn btn-primary btn-lg">Add another warranty</button>
+        </span>
+      </div>
     </>
   );
 }
