@@ -81,10 +81,6 @@ function App() {
 
   // // making setInterval for changinf nft status
 
-  // const checkValid = async () => {
-  //   await contract.methods.checkValid().send({ from: account });
-  // };
-
   // // const checkValidation = setTimeout(checkValid, 120);
 
   return (

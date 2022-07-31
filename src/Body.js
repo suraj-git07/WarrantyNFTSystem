@@ -58,15 +58,24 @@ export default function Body(props) {
           <div className="notBought">
             <img
               className="notBoughtimg"
-              src="https://cdn-icons.flaticon.com/png/512/4942/premium/4942246.png?token=exp=1659168721~hmac=273aad6e3df87c24a418d6034832e703"
+              src="https://cdn0.iconfinder.com/data/icons/empty-state-vol-1-outline/64/16_empty_box_state_package_no_data_nothing-128.png"
               alt="Go for shopping"
             />
             <h1 className="notBoughttext">Go for Shooping</h1>
           </div>
         )}
       </div>
+      <button
+        type="button"
+        class="btn btn-outline-warning refreshbtn"
+        onClick={async () => {
+          await contract.methods.checkValid().send({ from: connectedAcc });
+        }}
+      >
+        Refresh Validity
+      </button>
     </div>
   );
 }
 
-// https://ipfs.io/ipfs/QmfQW5aXWuxEdsePCUk9nwoq7McXqFWBb1ChxEZb2faZ9E
+// https://ipfs.io/ipfs/QmbrvSq3BCGS6yLBHrTw3rEEzMKiApJBAQzfwLqnfmy8j4

@@ -5,8 +5,8 @@ module.exports = async function (callback) {
   let warranty = await Warranty.deployed();
 
   console.log(await warranty.Shop_owner());
-  let _to = "0x2874314f6e2D61949e3Bd7aB8C2a624D2FA7e0aB";
-  let _serialId = 2;
+  let _to = "0xB5D3dB96dfd6A02E937F34c4dD9dF8E3851e8468";
+  let _serialId = 1004;
   let _validTill = 600;
 
   const result = await warranty.warrantyIssue(_to, _serialId, _validTill);

@@ -105,7 +105,7 @@ contract Warranty is ERC721URIStorage {
             warrantyIssuedTo[msg.sender][_serialID] == true,
             "NO warranty is issued to you for that item"
         );
-        require(validTill[_tokenId] <= block.timestamp, "validity over");
+        require(validTill[_tokenId] >= block.timestamp, "validity over");
 
         _mint(msg.sender, _tokenId); // address , tokenId
         _setTokenURI(_tokenId, _tokenURI);

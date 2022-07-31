@@ -35,17 +35,17 @@
 .notBoughtimg{
   width:250px;
   height:250px;
+  position: relative;
+  left: 75vh;
 }
 .notBoughttext{
   font-family: "Poppins";
-  color: #fffbfe;
+  color: #292934;
   position: relative;
-  right: 30px;
+  left: 70vh;
 }
 
-.bodyouterdiv{
-  
-}
+
 
 .nftcontent{
   color: white;
@@ -79,11 +79,14 @@
 }
 
 
-
+/* 
 .productimg{
   position: inherit;
   z-index: -1;
-}
+} */
+
+
+
 
 .claimNFT{
   background-color:#0397FE ;
@@ -109,8 +112,9 @@
 
 .refreshbtn{
   position: relative;
-  left:45% ;
-  color: rgb(238, 244, 248);
+  left:40% ;
+  margin: 30px;
+  /* color: rgb(238, 244, 248); */
   font-family: "Poppins";
 
 }
