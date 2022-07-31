@@ -38,6 +38,7 @@ export default function NFTCard(props) {
       _validTill = _validTill.toNumber();
       setvalidity(_isvalid);
       setValidTill(_validTill);
+      console.log(validity);
     };
 
     const NFTImgData = (data) => {
@@ -162,13 +163,13 @@ export default function NFTCard(props) {
             </div>
             <span
               style={
-                validity
+                validity == "false"
                   ? { margin: "0", backgroundColor: "red" }
                   : { margin: "0" }
               }
               className="python category"
             >
-              {validity == true ? "Warranty Valid" : "Warranty InValid"}
+              {validity == "true" ? "Warranty Valid" : "Warranty InValid"}
             </span>{" "}
           </span>
         </div>

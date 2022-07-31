@@ -50,7 +50,8 @@ export default function Body(props) {
   );
 
   return (
-    <div className="bodyouterdiv">
+    <>
+      <div className="bodyouterdiv">
         {usertokenIDs.length > 0 ? (
           usertokenIDs.map(createNFTCard)
         ) : (
@@ -63,7 +64,6 @@ export default function Body(props) {
             <h1 className="notBoughttext">Go for Shooping</h1>
           </div>
         )}
-<<<<<<< HEAD
       </div>
       <button
         type="button"
@@ -74,9 +74,7 @@ export default function Body(props) {
       >
         Refresh Validity
       </button>
-=======
->>>>>>> 7ec58c5c0e8d549a31eaea6b3affe176735b356d
-    </div>
+    </>
   );
 }
 
